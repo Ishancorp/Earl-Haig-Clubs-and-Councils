@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rLw-Sr-Yk9">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Club and Council List-->
+        <scene sceneID="3bi-k3-G2J">
+            <objects>
+                <tableViewController extendedLayoutIncludesOpaqueBars="YES" automaticallyAdjustsScrollViewInsets="NO" id="ers-j6-PMk" userLabel="Club and Council List" customClass="ClubListTableViewController" customModule="Earl_Haig_Clubs" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="h8e-bv-XdG">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Club Council Name" id="Vok-5w-uWd">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vok-5w-uWd" id="dVc-9z-1WP">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="ytE-9C-iDH" kind="show" identifier="Show Details" id="Gws-be-F5g"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Image Cell" rowHeight="48" id="Mef-cy-a97" customClass="ImageCellTableViewCell" customModule="Earl_Haig_Clubs" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mef-cy-a97" id="P2c-06-2gi">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="piv-Yb-DAK">
+                                            <rect key="frame" x="8" y="10" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="0A9-LM-hBo"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="G3Z-ke-8oW"/>
+                                                <constraint firstAttribute="width" constant="30" id="MFM-vj-txA"/>
+                                                <constraint firstAttribute="height" constant="30" id="Mv3-ZC-BCt"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="Zed-wi-hxV"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="30" id="em8-w7-t5d"/>
+                                                <constraint firstAttribute="height" constant="30" id="gRb-zm-W79"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Mv3-ZC-BCt"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zkN-53-pjS">
+                                            <rect key="frame" x="46" y="18" width="546" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="zkN-53-pjS" firstAttribute="top" secondItem="P2c-06-2gi" secondAttribute="topMargin" constant="10" id="1Em-nK-dYk"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="piv-Yb-DAK" secondAttribute="bottom" id="B7T-F2-IA1"/>
+                                        <constraint firstItem="zkN-53-pjS" firstAttribute="bottom" secondItem="P2c-06-2gi" secondAttribute="bottomMargin" id="GLZ-Rh-INb"/>
+                                        <constraint firstItem="piv-Yb-DAK" firstAttribute="top" secondItem="P2c-06-2gi" secondAttribute="topMargin" constant="2" id="M9Q-VZ-U36"/>
+                                        <constraint firstItem="zkN-53-pjS" firstAttribute="leading" secondItem="piv-Yb-DAK" secondAttribute="trailing" constant="8" id="aYf-Cj-MMC"/>
+                                        <constraint firstItem="piv-Yb-DAK" firstAttribute="leading" secondItem="P2c-06-2gi" secondAttribute="leadingMargin" id="dzn-yc-Pek"/>
+                                        <constraint firstItem="zkN-53-pjS" firstAttribute="trailing" secondItem="P2c-06-2gi" secondAttribute="trailingMargin" id="kZL-qy-WgE"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="M9Q-VZ-U36"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="clubImage" destination="piv-Yb-DAK" id="upP-Mo-iE9"/>
+                                    <outlet property="clubTitle" destination="zkN-53-pjS" id="efV-kp-ayf"/>
+                                    <segue destination="ytE-9C-iDH" kind="show" identifier="Show Details2" id="6cl-WP-Y0F"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ers-j6-PMk" id="1Ko-kL-BKx"/>
+                            <outlet property="delegate" destination="ers-j6-PMk" id="IdJ-Bc-DjI"/>
+                        </connections>
+                    </tableView>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Earl Haig Clubs and Councils" id="a5j-b8-hpa">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="QTE-nY-YeU"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDo-Fv-fTo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2208" y="705"/>
+        </scene>
+        <!--Club Details-->
+        <scene sceneID="lcs-5b-oze">
+            <objects>
+                <viewController id="ytE-9C-iDH" userLabel="Club Details" customClass="ClubDetailsViewController" customModule="Earl_Haig_Clubs" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fcY-Sq-Jt8"/>
+                        <viewControllerLayoutGuide type="bottom" id="OVk-3c-Jtw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oHO-QW-swx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="TopLeft" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tlk-mD-hua">
+                                <rect key="frame" x="16" y="72" width="568" height="508"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tlk-mD-hua" firstAttribute="leading" secondItem="oHO-QW-swx" secondAttribute="leadingMargin" id="Cpa-Yd-evV"/>
+                            <constraint firstItem="tlk-mD-hua" firstAttribute="trailing" secondItem="oHO-QW-swx" secondAttribute="trailingMargin" id="I9X-EV-qpp"/>
+                            <constraint firstItem="OVk-3c-Jtw" firstAttribute="top" secondItem="tlk-mD-hua" secondAttribute="bottom" constant="20" id="qNc-rX-9DE"/>
+                            <constraint firstItem="tlk-mD-hua" firstAttribute="top" secondItem="fcY-Sq-Jt8" secondAttribute="bottom" constant="8" id="v1m-9i-jeN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="details" destination="tlk-mD-hua" id="zCm-QC-KJN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ziP-6O-MNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2914" y="714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5ku-Cz-iPu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rLw-Sr-Yk9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nwx-sI-APP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ers-j6-PMk" kind="relationship" relationship="rootViewController" id="WqI-Nm-7Y9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfY-te-yCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="714"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="6cl-WP-Y0F"/>
+    </inferredMetricsTieBreakers>
+</document>
